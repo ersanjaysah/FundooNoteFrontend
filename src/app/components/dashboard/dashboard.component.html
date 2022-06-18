@@ -1,0 +1,56 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" >
+  <mat-toolbar class="example-toolbar">
+    <div class="second-div">
+      <button class="button1" mat-icon-button (click)="snav.toggle()">
+        <mat-icon class="Menu">menu</mat-icon>
+      </button>
+      <img src="../../../assets/keep.png">
+      <h1 class="example-app-name">Fundoo</h1>
+    </div>
+
+    
+    <div class="third-div" fxHide.xs>
+      <img src="../../../assets/search.svg" width="30px" />
+      <input (keyup)="searchtitle($event)" matInput placeholder="search" />
+    </div>
+
+    <div class="forth-div">
+      <img src="../../../assets/refresh.svg" />
+      <img src="../../../assets/dns.svg" />
+      <img src="../../../assets/settings.svg" />
+    </div>
+    <div class="fifth-div">
+      <img src="../../../assets/apps.svg" />
+    </div>
+    
+    <div class="fifth-div">
+      <img src="../../../assets/account.svg"  mat-button [matMenuTriggerFor]="menu"/>
+       <mat-menu #menu="matMenu">
+        <button (click)=" Logout()" mat-menu-item>Logout</button>
+      </mat-menu>
+    </div>
+
+    
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56">
+      <mat-nav-list class="list">
+        <a mat-list-item routerLink="/dashboard/notes"> <img src="../../../assets/lightbulb.svg" />Notes</a>
+
+        <a mat-list-item routerLink="/dashboard/remainders"> <img src="../../../assets/addalert.svg" />Remainder</a>
+
+        <a mat-list-item routerLink="/dashboard/edit-labels"> <img src="../../../assets/edit.svg" />Edit Label</a>
+
+        <a mat-list-item routerLink="/dashboard/archive"> <img src="../../../assets/archive.svg" />Archive</a>
+
+        <a mat-list-item routerLink="/dashboard/trash"> <img src="../../../assets/delete.svg" />Trash</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="sidecontainer">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

@@ -1,0 +1,101 @@
+    .outerstyle{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        border: 1px solid gray;
+        height: 600px;
+        width: 60%;
+    }
+    .firstclass{
+        display: flex;
+        justify-content: space-between;
+    }
+   .control{
+        font-size: 28px;
+        line-height: 53px;
+        letter-spacing: 0.14em;
+        font-weight: 600;
+    }
+   
+    .emailpara{
+        font-size: 12px;
+        line-height: 0px;
+        letter-spacing: -0.018em;
+        font-weight: 300;
+    }
+    .passwordclass{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .link{
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 54px;
+        letter-spacing: 0.044em;
+        color: #3d38cc;
+    }
+    .passwordpara{
+        color: rgba(14, 13, 13, 0.685);
+    }
+    .btn{
+        padding-top: 55px;
+    }
+    .btn button{
+        position: relative;
+        background-color: hwb(242 9% 12%);
+        border:hwb(242 9% 12%) ;
+        left: 250px;
+        height: 40px;
+        width: 70px;
+        font-size: 15px;
+        line-height: 0.8;
+        letter-spacing: -0.018em;
+        font-weight: 400;
+        color: white;
+        
+    }
+    .btn span a{
+        text-decoration: none;
+    } 
+    .image {
+        width: 30%;
+        height: 50%;
+        margin-top: 80px;
+        margin-left: 60px;
+
+    }
+    .image .para1{
+        position: relative;
+        left: 35px;
+        color: rgba(14, 13, 13, 0.685);
+    }
+    .image .para2{
+        position: relative;
+        left: 65px;
+        line-height: 0px;
+        color: rgba(14, 13, 13, 0.685);
+    }
+   .blue{
+        color: blue;
+    }
+    .red{
+        color: red;
+    }
+    .orange{
+        color: orange;
+    }
+    .yellow{
+        color: yellow;
+    }
+    .color{
+        color: palevioletred;
+    }
+    .green{
+        color: green;
+    }

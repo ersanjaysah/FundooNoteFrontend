@@ -1,0 +1,13 @@
+<div> 
+    <div fxLayout="column" [style.background]="data.color">
+        <input type="text" [(ngModel)]="title">
+        <input type="text" [(ngModel)]="description">
+
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <app-icons [childMessage]="data"></app-icons>
+            <div class="btn">
+            <button mat-button (click)="onNoClick()">Close</button>
+        </div>
+        </div>
+    </div>
+</div>

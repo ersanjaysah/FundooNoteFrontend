@@ -1,0 +1,50 @@
+<div class="mainpage">
+  <div class="second-div">
+    <div class="thired-div">
+      <form [formGroup]="resetForm" (ngSubmit)="onSubmit()">
+        <div class="forth-div">
+          <span style="color: blue">F</span>
+          <span style="color: red">U</span>
+          <span style="color: orange">N</span>
+          <span style="color: yellow">D</span>
+          <span style="color: green">O</span>
+          <span style="color: palevioletred">O</span>
+        </div>
+        <div class="fifth-div">Change password to sign in</div>
+        <div class="sixth-div">Create a strong FundooNote password</div>
+        <div class="seventh-div">
+          <p>
+            <mat-form-field class="password" appearance="outline">
+              <mat-label>Create Password</mat-label>
+              <input
+                matInput
+                placeholder="Create Password"
+                formControlName="password"
+              />
+              <mat-error>enter your password</mat-error>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field class="password" appearance="outline">
+              <mat-label>Reset Password</mat-label>
+              <input
+                matInput
+                placeholder="reset Password"
+                formControlName="confirmPassword"
+              />
+              <mat-hint
+                ><p>
+                  At least 8 characters with a mix of letters, numbers & symbols
+                </p></mat-hint
+              >
+              <mat-error>enter your confirm password</mat-error>
+            </mat-form-field>
+          </p>
+        </div>
+        <div class="btn">
+          <button mat-raised-button>Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

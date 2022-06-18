@@ -1,0 +1,41 @@
+
+<div class="form" fxLayout="row" fxLayourAlign="center" *ngIf="!isTrash">
+    <img src="../../../assets/addalert.svg"  height="20px"/>
+    <img src="../../../assets/person_add.svg"  height="20px"/>
+
+    <img mat-button [matMenuTriggerFor]="color"  src="../../../assets/colour.svg"  height="20px"/>
+    <mat-menu #color="matMenu" yPosition="below" >
+   
+        <div class="colour">
+            <div  *ngFor="let array of colorArray" >
+            <button style="height: 30px ;width: 30px;display: block;border-radius: 100px;"
+             mat-menu-item (click)="changeColor(array.name)" [style.background]="array.name"></button>
+            
+        </div>
+        
+    </div>
+</mat-menu>
+    
+    <img  src="../../../assets/photo.svg"  height="20px"/>
+    <img *ngIf="!isArchive && !isTrash" src="../../../assets/archive.svg"  height="20px" (click)="Archive()"/>
+    <img *ngIf="isArchive && !isTrash" src="../../../assets/unarchive.svg" height="20px" (click)="UnArchievenote()">
+
+    <div>
+        <img  mat-button [matMenuTriggerFor]="menu" src="../../../assets/more.svg">
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="Trash()">Delete note</button>
+        </mat-menu>
+
+    </div>
+    
+</div>
+<div *ngIf="isTrash" fxLayout="row" fxLayourAlign="center">
+    <div (click)="DeletePermanent()" >
+        <img class="icons" src="../../../assets/delete.svg">
+    </div>
+
+    <div class="buttons" (click)="Restore()" >
+        <img class="icons" src="../../../assets/restore_trash.svg">
+    </div>
+
+</div>

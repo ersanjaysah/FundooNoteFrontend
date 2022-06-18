@@ -1,0 +1,47 @@
+<div class="outerstyle">
+  <div class="borderstyle">
+    <div>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="control">
+          <span class="blue">F</span>
+          <span class="red">U</span>
+          <span class="orange">N</span>
+          <span class="yellow">D</span>
+          <span class="color">O</span>
+          <span class="green">O</span>
+        </div>
+        <h2 class="h2">Sign in</h2>
+        <div class="para">
+          <p>Use your Fundoo Account</p>
+        </div>
+        <div>
+          <mat-form-field class="designEmail" appearance="outline">
+            <mat-label>Email or Phone</mat-label>
+            <input matInput placeholder="Email" formControlName="email" />
+            <mat-error>enter your email</mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="designEmail" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" formControlName="password" />
+            <mat-error>enter your Password</mat-error>
+          </mat-form-field>
+          <div class="passforgot">
+            <a routerLink="/forgot">Forgot password?</a>
+          </div>
+        </div>
+        <br />
+        <div class="message">
+          your computer? Use Guest mode to sign in privately.
+        </div>
+        <div class="link"><a href="Learn more">Learn more</a></div>
+
+        <div class="btn">
+          <a mat-button routerLink="/register">Create Account</a>
+          <button mat-raised-button>Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="one" fxLayout="row" fxLayout="row wrap">
+    <div *ngFor="let note of childMessage | filter:searchword">
+        <div class="second" [style.background]="note.color">
+            <div>
+                <div fxLayout="row" fxLayoutAlign="space-between" class="add-note-input" (click)="openDialog(note)">
+                    <h3>{{ note.title }}</h3>
+                    <img class="img" src="../../../assets/pin.svg" />
+                </div>
+                <div  (click)="openDialog(note)" style="margin-bottom: 10px; padding-bottom: 5px; margin-left: 16px">
+                    <p>{{ note.description }}</p>
+                </div>
+            </div>
+
+            <div>
+                <app-icons [childMessage]="note" (iconstodisplay)="recievefromiconstodisplaycard($event)" [childMessage]="note" (noteOperation)="operation($event)"></app-icons>
+            </div>
+        </div>
+    </div>
+</div>
