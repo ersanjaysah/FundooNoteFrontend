@@ -120,10 +120,11 @@ export class IconsComponent implements OnInit {
     }
     this.note.deleteNote(reqdata).subscribe((response: any) => {
       console.log('Delete Notes', response);
-      this.iconstodisplay.emit(response);
+       this.iconstodisplay.emit(response);
       this.snackBar.open('Note Restored Successfully..!!!', '..', {
         duration: 3000,
       })
+      
     })
   }
 
@@ -132,10 +133,11 @@ export class IconsComponent implements OnInit {
     console.log(this.childMessage);
     this.note.ChangeColor(this.childMessage.noteID,color).subscribe((response:any)=>{
       console.log('Note color changed',response);
+      this.iconstodisplay.emit(response);
       this.snackBar.open('colour changed Successfully..!!!', '..', {
         duration: 3000,
       })
-      this.iconstodisplay.emit(response);
+      // this.iconstodisplay.emit(response);
       
     })
 

@@ -32,7 +32,7 @@ export class DashboardComponent implements OnDestroy {
     console.log("input in search field ===", event.target.value);
     this.value = event.target.value
     let Ddata = {
-      type: 'search',
+      type: this.data,
       data: [this.value]
     }
     this.data.changeMessage(Ddata)
