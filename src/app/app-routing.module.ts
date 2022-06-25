@@ -12,7 +12,7 @@ import { RemaindersComponent } from './components/remainders/remainders.componen
 import { ResetPasswardComponent } from './components/reset-passward/reset-passward.component';
 import { TrashComponent } from './components/trash/trash.component';
 
-//routes defines array of the roots that map a path to a component
+//routes defines array of the roots that map a path to the component
 const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'login',component:LoginComponent},

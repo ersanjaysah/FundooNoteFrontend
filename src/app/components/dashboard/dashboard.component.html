@@ -16,7 +16,17 @@
 
     <div class="forth-div">
       <img src="../../../assets/refresh.svg" />
-      <img src="../../../assets/dns.svg" />
+
+      
+      <div *ngIf="!grid" class="list-view">
+        <img (click)="formatListView();FormatView()" src="../../../assets/dns.svg">
+        
+      </div>
+      <div *ngIf="grid" class="list-view">
+        <img (click)="formatGridView();FormatView()" src="../../../assets/grid_view.svg">
+      </div>
+
+
       <img src="../../../assets/settings.svg" />
     </div>
     <div class="fifth-div">

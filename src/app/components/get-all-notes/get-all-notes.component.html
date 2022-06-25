@@ -1,3 +1,3 @@
 <app-add-note (createtodisplay)="recieveEvent($event)"></app-add-note>
-<app-display-notes [childMessage]="noteArray" (displaytogetallnotes)="receiveMessagefromdisplaycard($event)" (noteUpdated)="updatedData($event)"></app-display-notes>
+<app-display-notes [childMessage]="noteArray" (displaytogetallnotes)="receiveMessagefromdisplaycard($event)" (noteUpdated)="updatedData($event)" [class.gridToList]="gridList"></app-display-notes>
 

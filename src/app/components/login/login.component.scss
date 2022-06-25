@@ -1,5 +1,5 @@
 .outerstyle{
-    
+    // border: 1px solid red;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -7,15 +7,18 @@
 }
 .borderstyle{
     
+     //border: 1px solid blue;
     margin-top: 40px;
+  //  padding-bottom: auto;
     display: flex;
     justify-content: center;
-   // border: 1px solid gray;
     height: 540px;
     width: 35%;
     //border:  2px solid black;
     box-shadow: 0px -0px 10px #00000029;
 }
+
+
 .control{
    // border: 1px solid red;
     position: relative;
@@ -30,6 +33,7 @@
     margin-top: 10px
 }
 .h2{
+   // border: 1px solid red;
     position: relative;
     left:150px ;
     font-size: 28px;
@@ -38,7 +42,7 @@
     font-weight: 300;
 }
 .para{
-    
+   //border: 1px solid red; 
 position: relative;
 left: 120px;
 
@@ -51,6 +55,7 @@ left: 120px;
 }
 .designEmail
 {
+    //border: 1px solid red;
   width: 400px;
  
 }
@@ -101,3 +106,39 @@ left: 120px;
 .green{
     color: green;
 }
+.xs-borderstyle{
+   // border: 1px solid blue;
+    width: 95%;
+    box-shadow: none;
+    
+}
+
+.xs-email mat-form-field{
+    //border: 1px solid red;
+    width: 100%;
+    
+}
+.xs-outerstyle{
+  //  border: 1px solid green;
+    width: 100%;
+}
+.xs-control span{
+   // border: 1px solid red;
+    position: relative;
+    right: 32px;
+
+}
+.xs-control h2{
+    // border: 1px solid red;
+     position: relative;
+     left: 5px;
+     padding-left: 34%;
+ 
+ }
+ .xs-control p{
+    // border: 1px solid red;
+     position: relative;
+     right: 32px;
+ 
+ }
+

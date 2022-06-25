@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { ArchiveComponent } from '../archive/archive.component';
+//import { DisplayNotesComponent } from '../display-notes/display-notes.component';
 import { NoteService } from '../service/noteservice/note.service';
 import { TrashComponent } from '../trash/trash.component';
 
@@ -11,12 +12,14 @@ import { TrashComponent } from '../trash/trash.component';
   styleUrls: ['./icons.component.scss']
 })
 export class IconsComponent implements OnInit {
-
+  noteId:any;
+  
   @Input() childMessage: any;
   @Output() iconstodisplay = new EventEmitter<string>()
   
   isTrash: boolean = false;
   isArchive: boolean = false;
+  
 
   colorArray=[
     { code: '#ffffff', name: 'white' },
@@ -44,6 +47,8 @@ export class IconsComponent implements OnInit {
     if (comp == TrashComponent) {
       this.isTrash = true;
     }
+    
+    
   }
 
   //*************************  Trash Note  *********************
@@ -137,9 +142,26 @@ export class IconsComponent implements OnInit {
       this.snackBar.open('colour changed Successfully..!!!', '..', {
         duration: 3000,
       })
-      // this.iconstodisplay.emit(response);
+      
       
     })
 
   }
+
+//   changeColor(color:any){
+//     this.noteId=[this.childMessage.noteID]
+//     let data = {
+//       colour : color
+//     }
+//     this.note.ChangeColor(this.childMessage.noteID,color).subscribe((response:any)=>{
+//            console.log('Note color changed',response);
+//            this.iconstodisplay.emit(response);
+//            this.snackBar.open('colour changed Successfully..!!!', '..', {
+//              duration: 3000,
+//            })
+          
+          
+//         })
+    
+// }
 }

@@ -18,7 +18,10 @@ export class DisplayNotesComponent implements OnInit {
   subscription: any;
   searchword: any;
   message:any;
-  constructor(public dialog:MatDialog, private data: DataService) { }
+  gridList:any=false;
+
+ constructor(public dialog:MatDialog, private data: DataService) { }
+
   //search 
   ngOnInit(): void {
     this.subscription = this.data.currentMessage.subscribe(message => {
@@ -26,6 +29,15 @@ export class DisplayNotesComponent implements OnInit {
       console.log(message.data[0]);
       this.searchword = message.data[0]
     });
+    this.data.destinationMessage.subscribe((message:any)=>{
+      console.log(message);
+      if(message=="grid"){
+       this.gridList=true;
+      }
+      else{
+        this.gridList=false;
+      }
+    })
   }
   openDialog(note:any): void {
     const dialogRef = this.dialog.open(UpdatenoteComponent,{

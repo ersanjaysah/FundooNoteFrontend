@@ -9,6 +9,9 @@ import { NoteService } from '../service/noteservice/note.service';
 export class GetAllNotesComponent implements OnInit {
   noteArray:any;
 
+  
+  gridList:any;
+
   constructor(private note:NoteService ) { }
 
   ngOnInit(): void 

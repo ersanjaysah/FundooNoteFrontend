@@ -19,33 +19,41 @@ export class UpdatenoteComponent implements OnInit {
 
   constructor(private note:NoteService,private snackBar:MatSnackBar,
     public dialogRef: MatDialogRef<UpdatenoteComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) {
-      this.title = data.title
-      this.description = data.description
-      this.noteId = data.noteID
-    }
+    @Inject(MAT_DIALOG_DATA) public data: any) {}
     
-  ngOnInit(): void {
-    console.log(this.data);
-    this.title=this.data.title;
-    this.description=this.data.description;
+    ngOnInit(): void {
+    this.title = this.data.title;
+    this.description = this.data.description;
+    this.noteId = this.data.noteID;
     this.color=this.data.color;
-}
+ }
 
 onNoClick(): void {
+  
   let data={
+    
     Title: this.title,
     Description: this.description,
     "color":"string",
+
+    
   }
-  console.log("data print",data);
+  
   this.note.updateNote(data,this.noteId).subscribe((result:any)=>{
     console.log(result);
     this.noteUpdated.emit(result);
 
-    this.snackBar.open('Note Updated Successfully..!!!', '..', {
+    this.snackBar.open('Note Updated Successfully..!!!', '', {
       duration: 3000,
     })
+    this.dialogRef.close();
   })
-  this.dialogRef.close();
-}}
+ 
+}
+receiveMessagefromdisplaycard($event:any){
+  this.onNoClick()
+}
+}
+
+
+

@@ -31,7 +31,7 @@ export class RegisterComponent implements OnInit {
         lastName:this.registerForm.value.lastName,
         email:this.registerForm.value.email,
         password:this.registerForm.value.password,
-       // confirmPassword:this.registerForm.value.confirmPassword,
+       
       }
        this.user.Registration(reqData).subscribe((result:any)=>{console.log(result);})
     }

@@ -47,6 +47,7 @@ h1.example-app-name {
   background-color: #fff;
 }
 .Menu{
+  //border: 1px solid red;
   color: #000;
 }
 .second-div{
@@ -99,6 +100,26 @@ h1.example-app-name {
   }
   
 }
+
+.list-view{
+ //border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5px;
+ 
+  :hover{
+    background-color: #f1f3f4;
+    border-radius: 80%;
+  }
+  img{
+    margin-right: 10px;
+   // padding: 18px;
+    //height: 25px;
+    width: auto;
+  }
+  
+}
 .fifth-div{
   display: flex;
   justify-content: center;
@@ -143,3 +164,5 @@ border: 1px solid red;
 position: relative;
 left: 2rem;
 }
+
+

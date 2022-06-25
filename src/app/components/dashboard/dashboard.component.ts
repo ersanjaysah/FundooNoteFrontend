@@ -1,7 +1,7 @@
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../service/data.service';
 
 @Component({
@@ -14,10 +14,13 @@ export class DashboardComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
   token:any;
 
+  grid = false;
+  formatGridList = false;  
+
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,private router:Router,private snackBar:MatSnackBar, private data:DataService) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,private router:Router,private snackBar:MatSnackBar, private data:DataService, private activeRoute:ActivatedRoute) {
     
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -37,6 +40,7 @@ export class DashboardComponent implements OnDestroy {
     }
     this.data.changeMessage(Ddata)
   }
+
   //*********************************** Logout ***************************/
   Logout() {
     this.token = localStorage.removeItem('token');
@@ -45,7 +49,35 @@ export class DashboardComponent implements OnDestroy {
       duration: 3000,
     })
   }
+
+ 
+   FormatView() {
+    if (this.formatGridList == false) {
+      this.formatGridList = true
+      return this.formatGridList
+    }
+    else {
+      this.formatGridList = false
+      return this.formatGridList
+    }
+  }
+
+  formatListView() {
+    this.grid = true
+
+    this.data.sourcemessage("list")
+    console.log("value ", this.FormatView())
+  }
+
+  formatGridView() {
+    this.grid = false
+    this.data.sourcemessage("grid")
+    console.log("value ", this.FormatView())
+  }
+  
 }
+
+
   
 
 

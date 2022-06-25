@@ -4,7 +4,7 @@
         <input type="text" [(ngModel)]="description">
 
         <div fxLayout="row" fxLayoutAlign="space-between center">
-            <app-icons [childMessage]="data"></app-icons>
+            <app-icons [childMessage]="data" (refresh)="receiveMessagefromdisplaycard($event)" ></app-icons>
             <div class="btn">
             <button mat-button (click)="onNoClick()">Close</button>
         </div>

@@ -1,55 +1,77 @@
-    .outerstyle{
+    .outerstyle {
+        // border:  1px solid red;
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .container{
+
+    .container {
+        // border:  1px solid green;
         display: flex;
         justify-content: center;
-        border: 1px solid gray;
-        height: 600px;
-        width: 60%;
+         border: 1px solid gray;
+        //box-shadow: 0px -0px 10px #00000029;
+        width: 55%;
+        height: auto;
+        border-radius: 5px;
     }
-    .firstclass{
+
+    .xs-class-container {
+        border: none; 
+        width: 95%;
+    }
+
+    .firstclass {
+        //border: 1px solid red;
         display: flex;
         justify-content: space-between;
     }
-   .control{
+
+    .control {
         font-size: 28px;
         line-height: 53px;
         letter-spacing: 0.14em;
         font-weight: 600;
     }
-   
-    .emailpara{
+
+    .emailpara {
         font-size: 12px;
         line-height: 0px;
         letter-spacing: -0.018em;
         font-weight: 300;
     }
-    .passwordclass{
+
+    .passwordclass {
         display: flex;
         justify-content: space-between;
     }
-    
-    .link{
+
+    .link {
         text-decoration: none;
         font-size: 14px;
         line-height: 54px;
         letter-spacing: 0.044em;
         color: #3d38cc;
     }
-    .passwordpara{
+
+    .passwordpara {
         color: rgba(14, 13, 13, 0.685);
     }
-    .btn{
-        padding-top: 55px;
+
+    .btn {
+        //  border: 1px solid red;
+        padding-top: 50px;
+        position: relative;
+        bottom: 30px;
+
+
     }
-    .btn button{
+
+    .btn button {
         position: relative;
         background-color: hwb(242 9% 12%);
-        border:hwb(242 9% 12%) ;
+        border: hwb(242 9% 12%);
         left: 250px;
         height: 40px;
         width: 70px;
@@ -58,44 +80,58 @@
         letter-spacing: -0.018em;
         font-weight: 400;
         color: white;
-        
     }
-    .btn span a{
+
+    .btn span a {
         text-decoration: none;
-    } 
+    }
+
     .image {
+        // border: 1px solid palevioletred;
         width: 30%;
         height: 50%;
-        margin-top: 80px;
-        margin-left: 60px;
-
+        margin-top: 17%;
     }
-    .image .para1{
+
+    .image .para1 {
         position: relative;
         left: 35px;
         color: rgba(14, 13, 13, 0.685);
     }
-    .image .para2{
+
+    .image .para2 {
         position: relative;
         left: 65px;
         line-height: 0px;
         color: rgba(14, 13, 13, 0.685);
     }
-   .blue{
+
+    .blue {
         color: blue;
     }
-    .red{
+
+    .red {
         color: red;
     }
-    .orange{
+
+    .orange {
         color: orange;
     }
-    .yellow{
+
+    .yellow {
         color: yellow;
     }
-    .color{
+
+    .color {
         color: palevioletred;
     }
-    .green{
+
+    .green {
         color: green;
+    }
+
+    .xs-button button {
+        // border: 1px solid red;
+        position: relative;
+        left: 53%;
     }

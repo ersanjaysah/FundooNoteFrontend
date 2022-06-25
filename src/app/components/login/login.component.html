@@ -1,8 +1,7 @@
-<div class="outerstyle">
-  <div class="borderstyle">
-    <div>
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <div class="control">
+<div class="outerstyle" ngClass.xs="xs-outerstyle">
+  <div class="borderstyle" ngClass.xs="xs-borderstyle">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="control" ngClass.xs="xs-control">
           <span class="blue">F</span>
           <span class="red">U</span>
           <span class="orange">N</span>
@@ -10,18 +9,20 @@
           <span class="color">O</span>
           <span class="green">O</span>
         </div>
-        <h2 class="h2">Sign in</h2>
-        <div class="para">
+        <div ngClass.xs="xs-control">
+        <h2 class="h2" >Sign in</h2>
+      </div>
+        <div class="para" ngClass.xs="xs-control">
           <p>Use your Fundoo Account</p>
         </div>
-        <div>
+        <div ngClass.xs="xs-email">
           <mat-form-field class="designEmail" appearance="outline">
             <mat-label>Email or Phone</mat-label>
             <input matInput placeholder="Email" formControlName="email" />
             <mat-error>enter your email</mat-error>
           </mat-form-field>
         </div>
-        <div>
+        <div ngClass.xs="xs-email">
           <mat-form-field class="designEmail" appearance="outline">
             <mat-label>Password</mat-label>
             <input matInput placeholder="Password" formControlName="password" />
@@ -42,6 +43,6 @@
           <button mat-raised-button>Next</button>
         </div>
       </form>
-    </div>
+    
   </div>
 </div>

@@ -35,6 +35,8 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { AuthorizationService } from './components/service/Authservice/authorization.service';
 import { FilterPipe } from './pipes/filter.pipe';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { DemocomponentComponent } from './components/democomponent/democomponent.component';
 
 
 @NgModule({
@@ -55,6 +57,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     EditLabelsComponent,
     UpdatenoteComponent,
     FilterPipe,
+    DemocomponentComponent,
     
     
     
@@ -68,7 +71,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     MatCheckboxModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatSidenavModule,MatToolbarModule,MatIconModule,MatListModule,FlexLayoutModule,FormsModule,MatMenuModule,MatDialogModule,MatSnackBarModule
+    MatSidenavModule,MatToolbarModule,MatIconModule,MatListModule,FlexLayoutModule,FormsModule,MatMenuModule,MatDialogModule,MatSnackBarModule,MatGridListModule
   ],
   providers: [AuthorizationService ],
   bootstrap: [AppComponent]

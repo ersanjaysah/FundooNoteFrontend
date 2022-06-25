@@ -100,6 +100,7 @@ export class NoteService {
 
   // change a coloue
   ChangeColor(noteId:any,color:any) {
+    
     let header = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
